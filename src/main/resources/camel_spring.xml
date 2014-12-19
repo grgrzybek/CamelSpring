@@ -10,7 +10,7 @@
 		xmlns="http://camel.apache.org/schema/spring">
 		<route id="nite">
 			<from uri="direct:start" />
-			<to uri="testRoute" />
+			<process ref="testRoute" />
 		</route>
 	</camelContext>
 	<bean id="testRoute" class="com.main.TestRouter" />
